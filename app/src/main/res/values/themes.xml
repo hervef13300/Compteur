@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Compteur" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/bleu_roi</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/bleu_roi</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+        <item name="colorSecondary">@color/bleu_nuit</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/fond</item>
+        <item name="colorOnSurface">@color/bleu_nuit</item>
+        <item name="android:windowBackground">@color/fond</item>
+        <item name="android:statusBarColor">@color/bleu_roi</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+</resources>

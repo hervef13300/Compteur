@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fond"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bleu_roi"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_logo"
+        app:navigationIconTint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/displayCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_padding"
+        android:layout_marginEnd="@dimen/screen_padding"
+        android:layout_marginTop="48dp"
+        app:cardBackgroundColor="@color/fond_carte"
+        app:cardCornerRadius="@dimen/card_corner"
+        app:cardElevation="4dp"
+        app:strokeColor="@color/bleu_roi"
+        app:strokeWidth="@dimen/card_stroke"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/digitsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textSize="@dimen/digits_text_size"
+            android:textColor="@color/bleu_nuit"
+            android:letterSpacing="0.15"
+            android:text="0000"
+            tools:text="0042" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPlus"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/btn_plus_height"
+        android:layout_marginStart="@dimen/screen_padding"
+        android:layout_marginEnd="@dimen/screen_padding"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/cd_plus"
+        android:backgroundTint="@color/bleu_roi"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="48dp"
+        app:iconTint="@color/white"
+        app:cornerRadius="48dp"
+        app:layout_constraintTop_toBottomOf="@id/displayCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMinus"
+        android:layout_width="@dimen/btn_minus_size"
+        android:layout_height="@dimen/btn_minus_size"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/cd_minus"
+        android:backgroundTint="@color/bleu_nuit"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/ic_remove"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="36dp"
+        app:iconTint="@color/white"
+        app:cornerRadius="36dp"
+        app:layout_constraintTop_toBottomOf="@id/btnPlus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/wave"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/wave_height"
+        android:scaleType="fitXY"
+        android:contentDescription="@null"
+        android:src="@drawable/bg_wave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

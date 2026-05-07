@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bleu_roi">#006AB3</color>
+    <color name="bleu_nuit">#0F1B5F</color>
+    <color name="gris_60">#808285</color>
+    <color name="bleu_roi_pressed">#005691</color>
+    <color name="bleu_nuit_pressed">#0A1448</color>
+    <color name="fond">#FFFFFF</color>
+    <color name="fond_carte">#F5F8FB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Orbite ellipse (Bleu Roi sur thème, blanc dans toolbar) -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:fillColor="#00000000"
+        android:pathData="M20,60 A40,18 -15 1 0 100,60 A40,18 -15 1 0 20,60 Z" />
+    <!-- Point central (Bleu Nuit sur fond clair, blanc ici sur fond bleu) -->
+    <path
+        android:fillColor="#0F1B5F"
+        android:pathData="M58,38 A6,6 0 1 1 62,38 A6,6 0 1 1 58,38 Z" />
+</vector>
