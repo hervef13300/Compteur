@@ -8,7 +8,7 @@
     <string name="reset_confirm">Réinitialiser</string>
     <string name="cancel">Annuler</string>
     <string name="about_title">À propos</string>
-    <string name="about_message">Compteur Provence Cloud\nVersion 1.0\n\nApp simple de comptage manuel.</string>
+    <string name="about_message">Compteur Provence Cloud\nVersion 1.1\n\nApp simple de comptage manuel.</string>
     <string name="ok">OK</string>
     <string name="cd_plus">Incrémenter</string>
     <string name="cd_minus">Décrémenter</string>

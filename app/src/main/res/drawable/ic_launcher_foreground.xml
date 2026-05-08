@@ -4,19 +4,28 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Logo Provence Cloud centré dans la zone safe (66dp) -->
-    <group
-        android:translateX="14"
-        android:translateY="30">
-        <!-- Orbite blanche -->
-        <path
-            android:strokeColor="#FFFFFF"
-            android:strokeWidth="3.5"
-            android:fillColor="#00000000"
-            android:pathData="M5,30 A35,15 -12 1 0 75,30 A35,15 -12 1 0 5,30 Z" />
-        <!-- Point bleu nuit -->
-        <path
-            android:fillColor="#0F1B5F"
-            android:pathData="M37,12 A4,4 0 1 1 43,12 A4,4 0 1 1 37,12 Z" />
-    </group>
+
+    <!-- + centré à y=46 (laisse la place aux tallies en bas) -->
+    <!-- Bras horizontal -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,39 H72 a7,7 0 0,1 7,7 v0 a7,7 0 0,1 -7,7 H36 a7,7 0 0,1 -7,-7 v0 a7,7 0 0,1 7,-7 z" />
+    <!-- Bras vertical -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M47,21 h14 a7,7 0 0,1 7,7 v36 a7,7 0 0,1 -7,7 h-14 a7,7 0 0,1 -7,-7 v-36 a7,7 0 0,1 7,-7 z" />
+
+    <!-- 4 tally marks (= 4 chiffres du compteur) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,81 h8 a2,2 0 0,1 2,2 v8 a2,2 0 0,1 -2,2 h-8 a2,2 0 0,1 -2,-2 v-8 a2,2 0 0,1 2,-2 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,81 h8 a2,2 0 0,1 2,2 v8 a2,2 0 0,1 -2,2 h-8 a2,2 0 0,1 -2,-2 v-8 a2,2 0 0,1 2,-2 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M56,81 h8 a2,2 0 0,1 2,2 v8 a2,2 0 0,1 -2,2 h-8 a2,2 0 0,1 -2,-2 v-8 a2,2 0 0,1 2,-2 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M68,81 h8 a2,2 0 0,1 2,2 v8 a2,2 0 0,1 -2,2 h-8 a2,2 0 0,1 -2,-2 v-8 a2,2 0 0,1 2,-2 z" />
 </vector>
