@@ -14,6 +14,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: build-apk-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     name: Build debug APK
@@ -56,15 +60,25 @@ jobs:
       - name: Commit APK to branch
         if: github.event_name == 'push' && !startsWith(github.ref, 'refs/tags/') && !contains(github.event.head_commit.message, '[skip ci]')
         run: |
+          set -e
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add release/Compteur.apk
           if git diff --cached --quiet; then
             echo "Aucun changement d'APK à commiter."
-          else
-            git commit -m "ci: build APK [skip ci]"
-            git push origin HEAD:${GITHUB_REF#refs/heads/}
+            exit 0
           fi
+          git commit -m "ci: build APK [skip ci]"
+          branch="${GITHUB_REF#refs/heads/}"
+          for i in 1 2 3 4 5; do
+            git push origin "HEAD:${branch}" && exit 0
+            echo "Push refusé, rebase puis nouvelle tentative (#$i)..."
+            git fetch origin "${branch}"
+            git rebase "origin/${branch}" || { git rebase --abort; exit 1; }
+            sleep $((i * 2))
+          done
+          echo "Push impossible après plusieurs tentatives." >&2
+          exit 1
 
       - name: Read app version
         id: appver
